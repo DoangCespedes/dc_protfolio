@@ -1,5 +1,5 @@
-import React from 'react';
-import { useDarkMode } from './hooks/useDarkMode';
+
+import { useDarkMode } from './hooks/useDarkMode.ts';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,7 +9,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
-  // Inicializar el hook de dark mode para aplicar la clase al documento
   useDarkMode();
 
   return (

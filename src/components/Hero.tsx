@@ -61,13 +61,47 @@ const Hero = () => {
     }
   }, []);
 
+  const titleRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+  const title = titleRef.current;
+  if (title) {
+    const handleMouseEnter = () => {
+      gsap.to(title, {
+        y: -10,
+        scale: 1.05,
+        rotation: -2,
+        ease: 'power2.out',
+        duration: 0.3,
+      });
+    };
+    const handleMouseLeave = () => {
+      gsap.to(title, {
+        y: 0,
+        scale: 1,
+        rotation: 0,
+        ease: 'power2.inOut',
+        duration: 0.3,
+      });
+    };
+
+    title.addEventListener('mouseenter', handleMouseEnter);
+    title.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      title.removeEventListener('mouseenter', handleMouseEnter);
+      title.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }
+}, []);
+
   return (
     <section id="inicio" className="pt-20 pb-16 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+              <h1 ref={titleRef} className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
                 Desarrollo
                 <span className="text-blue-600"> Web & Mobile Full Stack</span>
                 <br />

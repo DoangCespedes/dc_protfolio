@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { Mail, Phone, MapPin, Send, CheckCircle, Linkedin, Github } from 'lucide-react';
 
 const Contact = () => {
@@ -10,13 +11,17 @@ const Contact = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Aquí normalmente enviarías los datos a un servidor
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      await axios.post('http://localhost:3001/doangcespedesform', formData);
+      setIsSubmitted(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setIsSubmitted(false), 3000);
+    } catch (error) {
+      alert('Hubo un error al enviar el mensaje. Intenta de nuevo.');
+      console.error('Error enviando el formulario:', error);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -52,7 +57,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">Email</h4>
-                    <p className="text-gray-600 dark:text-gray-300">contacto@desarrollador.com</p>
+                    <p className="text-gray-600 dark:text-gray-300">doangcespedesloreto@gmail.com</p>
                   </div>
                 </div>
 
@@ -62,7 +67,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">Teléfono</h4>
-                    <p className="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</p>
+                    <p className="text-gray-600 dark:text-gray-300">+58 (412) 368-5108</p>
                   </div>
                 </div>
 
@@ -82,13 +87,13 @@ const Contact = () => {
               <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Sígueme en:</h4>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/doangcespedes/"
                   className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/DoangCespedes"
                   className="bg-gray-900 dark:bg-gray-700 text-white p-3 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
                 >
                   <Github className="h-5 w-5" />

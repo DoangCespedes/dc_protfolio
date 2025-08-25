@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { 
   Monitor, 
   Smartphone, 
@@ -6,7 +6,7 @@ import {
   Brain, 
   Cog, 
   Cloud,
-  ArrowRight,
+  // ArrowRight,
   CheckCircle
 } from 'lucide-react';
 
@@ -76,7 +76,7 @@ const Services = () => {
             Servicios Profesionales
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Soluciones tecnológicas completas para llevar tu negocio al siguiente nivel
+            Soluciones completas de desarrollo web y mobile con tecnologías modernas y arquitecturas escalables para llevar tu negocio al siguiente nivel
           </p>
         </div>
 
@@ -109,10 +109,10 @@ const Services = () => {
                 ))}
               </ul>
 
-              <button className="w-full bg-gray-900 dark:bg-gray-700 text-white py-3 px-6 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors flex items-center justify-center space-x-2 group">
+              {/* <button className="w-full bg-gray-900 dark:bg-gray-700 text-white py-3 px-6 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors flex items-center justify-center space-x-2 group">
                 <span>Más Información</span>
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </button> */}
             </div>
           ))}
         </div>

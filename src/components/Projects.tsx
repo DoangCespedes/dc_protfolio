@@ -1,44 +1,81 @@
-import React from 'react';
-import { ExternalLink, Github, Smartphone, Globe, Server, Brain } from 'lucide-react';
+
+import {  ExternalLink, 
+          // Github, 
+          // Smartphone, 
+          Globe, 
+          // Server, 
+          // Brain 
+        } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Plataforma completa de comercio electrónico con React, Node.js y integración de pagos.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      title: 'Real Seguros',
+      description: 'Plataforma completa para una compañia aseguradora residenciada en Venezuela, con cotización, pasarela de pagos compra de pólizas y gestión de clientes.',
+      image: '../../public/RealSeguros.png',
+      technologies: ['React', 'Next.js', 'Strapi','Fastify.js', 'PL/SQL', 'Docker'],
       type: 'Web App',
       icon: Globe,
-      features: ['Carrito de compras', 'Pagos seguros', 'Panel admin', 'Responsive']
+      link: 'https://real-seguros.com',
+      features: ['Cotizador de polizas', 'Pasarela de pagos', 'Panel administrativo', 'Responsive']
     },
     {
-      title: 'Mobile Banking App',
-      description: 'Aplicación móvil de banca digital con React Native y autenticación biométrica.',
-      image: 'https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React Native', 'TypeScript', 'Firebase', 'Biometrics'],
-      type: 'Mobile App',
-      icon: Smartphone,
-      features: ['Auth biométrica', 'Transferencias', 'Notificaciones', 'Seguridad']
+      title: 'Seguros Piramide',  
+      description: 'Plataforma completa para una compañia aseguradora residenciada en Venezuela, con cotización, pasarela de pagos compra de pólizas y gestión de clientes.',
+      image: '../../public/Piramide.png',
+      technologies: ['React', 'Gatsby', 'Strapi', 'Fastify.js', 'PL/SQL', 'Docker'],
+      type: 'Web App',
+      icon: Globe,
+      link: 'https://segurospiramide.com/',
+      features: ['Cotizador de polizas', 'Pasarela de pagos', 'Panel administrativo', 'Responsive']
     },
     {
-      title: 'AI Content Generator',
-      description: 'Plataforma de generación de contenido con IA, integración con GPT y análisis de datos.',
-      image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Next.js', 'OpenAI API', 'PostgreSQL', 'Python'],
-      type: 'AI Platform',
-      icon: Brain,
-      features: ['Generación IA', 'Analytics', 'Multi-idioma', 'API REST']
+      title: 'Oceanica de Seguros',
+      description: 'Plataforma completa para una compañia aseguradora residenciada en Venezuela, con cotización, pasarela de pagos compra de pólizas y gestión de clientes.',
+      image: '../../public/Oceanica.png',
+      technologies: ['React', 'Gatsby', 'Strapi',  'Fastify.js', 'PL/SQL', 'Docker'],
+      type: 'Web App',
+      icon: Globe,
+      link: 'https://oceanicadeseguros.com/',
+      features: ['Cotizador de polizas', 'Pasarela de pagos', 'Panel administrativo', 'Responsive']
     },
     {
-      title: 'Microservices Architecture',
-      description: 'Sistema distribuido con microservicios, Docker, Kubernetes y monitoreo avanzado.',
-      image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Docker', 'Kubernetes', 'Node.js', 'Redis'],
-      type: 'Backend System',
-      icon: Server,
-      features: ['Escalabilidad', 'Monitoring', 'Load Balancing', 'CI/CD']
-    }
+      title: 'Seguros Constitución',
+      description: 'Plataforma completa para una compañia aseguradora residenciada en Venezuela, con cotización, pasarela de pagos compra de pólizas y gestión de clientes.',
+      image: '../../public/Constitucion.png',
+      technologies: ['React', 'Next.js', 'Express', 'PL/SQL', 'Docker'],
+      type: 'Web App',
+      link: 'https://segurosconstitucion.com/',
+      icon: Globe,
+      features: ['Cotizador de polizas', 'Pasarela de pagos', 'Panel administrativo', 'Responsive']
+    },
+    // {
+    //   title: 'Mobile Banking App',
+    //   description: 'Aplicación móvil de banca digital con React Native y autenticación biométrica.',
+    //   image: 'https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   technologies: ['React Native', 'TypeScript', 'Firebase', 'Biometrics'],
+    //   type: 'Mobile App',
+    //   icon: Smartphone,
+    //   features: ['Auth biométrica', 'Transferencias', 'Notificaciones', 'Seguridad']
+    // },
+    // {
+    //   title: 'AI Content Generator',
+    //   description: 'Plataforma de generación de contenido con IA, integración con GPT y análisis de datos.',
+    //   image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   technologies: ['Next.js', 'OpenAI API', 'PostgreSQL', 'Python'],
+    //   type: 'AI Platform',
+    //   icon: Brain,
+    //   features: ['Generación IA', 'Analytics', 'Multi-idioma', 'API REST']
+    // },
+    // {
+    //   title: 'Microservices Architecture',
+    //   description: 'Sistema distribuido con microservicios, Docker, Kubernetes y monitoreo avanzado.',
+    //   image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   technologies: ['Docker', 'Kubernetes', 'Node.js', 'Redis'],
+    //   type: 'Backend System',
+    //   icon: Server,
+    //   features: ['Escalabilidad', 'Monitoring', 'Load Balancing', 'CI/CD']
+    // }
   ];
 
   return (
@@ -49,7 +86,7 @@ const Projects = () => {
             Proyectos Destacados
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Ejemplos de soluciones tecnológicas que demuestran experiencia y calidad
+            Con años de experiencia apoyando a empresas de seguros en el desarrollo, mantenimiento y mejora de sus plataformas digitales, ademas de proyectos internos para el uso de las mismas, todo esto utilizando un stack de tecnologías modernas.
           </p>
         </div>
 
@@ -108,14 +145,19 @@ const Projects = () => {
                 </div>
 
                 <div className="flex space-x-3">
-                  <button className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors flex items-center justify-center space-x-2">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors flex items-center justify-center space-x-2 text-center"
+                  >
                     <ExternalLink className="h-4 w-4" />
-                    <span>Ver Demo</span>
-                  </button>
-                  <button className="flex-1 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 py-2 px-4 rounded-lg hover:border-blue-600 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-colors flex items-center justify-center space-x-2">
+                    <span>Ir al sitio</span>
+                  </a>
+                  {/* <button className="flex-1 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 py-2 px-4 rounded-lg hover:border-blue-600 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-colors flex items-center justify-center space-x-2">
                     <Github className="h-4 w-4" />
                     <span>Código</span>
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
@@ -125,18 +167,18 @@ const Projects = () => {
         <div className="mt-16 text-center">
           <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              ¿Quieres ver más proyectos?
+              🚀 ¿Proyecto urgente?
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-              Estos son solo algunos ejemplos. Tengo experiencia en una amplia variedad de 
-              proyectos y tecnologías. ¡Hablemos sobre tu próximo proyecto!
+              Para proyectos con fechas límite ajustadas, contactame directamente por WhatsApp
             </p>
-            <button
-              onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+            <a
+              href="https://wa.me/584123685108?text=Quiero%20agendar%20una%20cita%20para%20un%20proyecto"
+              target="_blank"
               className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors"
             >
-              Discutir Tu Proyecto
-            </button>
+              WhatsApp Directo 
+            </a> 
           </div>
         </div>
       </div>
