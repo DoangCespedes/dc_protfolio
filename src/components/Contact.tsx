@@ -14,7 +14,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3001/doangcespedesform', formData);
+      await axios.post('https://node-with-resend.onrender.com/doangcespedesform', formData);
       setIsSubmitted(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
       setTimeout(() => setIsSubmitted(false), 3000);
